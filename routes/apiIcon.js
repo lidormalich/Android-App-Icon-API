@@ -50,7 +50,7 @@ router.get('/image/:app', async function (req, res) {
     const appPkgName = req.params.app;
     try {
         const pkgImgGoogle = await webScraperImage(appPkgName);
-        return res.status(200).send(pkgImgGoogle);
+        return res.status(200).send(pkgImgGoogle[0]);
     } catch (error) {
         res.status(404).send("")
     }
