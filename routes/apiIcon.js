@@ -21,7 +21,7 @@ const webScraperDesc = async (appPkgName, langugeCode = "en_US") => {
     const $ = await cheerio.load(html.data);
     let data = [];
 
-    $("div .SfzRHd").each((i, elem) => {
+    $("div .SfzRHd .bARER").each((i, elem) => {
         // data.push($(elem))
         data = $(elem).text()
         console.log({ elem: data });
